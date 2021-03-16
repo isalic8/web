@@ -1,0 +1,20 @@
+duckduckgo ; https://lite.duckduckgo.com/lite/
+unixfandom ; https://unixfandom.com
+pinebook software ; https://wiki.pine64.org/index.php/Pinebook_Pro_Software_Release
+roms ; https://romsdownload.net/
+tor arm ports ; https://sourceforge.net/projects/tor-browser-ports/files/
+torrent search ; https://cse.google.com/cse?cx=004085571554339270840:2pqtzbukmee
+shodan ; https://www.shodan.io/
+ipmagnet torrent ; http://ipmagnet.services.cbcdn.com/?hash=c57dd59d34b8e7a79546b33f73511c0e65066449
+rapid7 ; https://www.rapid7.com/db/
+iknowwhatyoudownload ; https://iknowwhatyoudownload.com/
+astrobaby ; https://astr0baby.wordpress.com
+torrentz2 ; https://torrentz2eu.me
+lainchan ; https://lainchan.org
+suckless ; https://suckless.org
+suckless dwm ; https://dwm.suckless.org/patches
+suckless st ; https://st.suckless.org/patches
+ebay ; https://ebay.com
+appimage ai ; https://appimage.github.io/apps/
+matrix homesever ; https://www.anchel.nl/matrix-publiclist/
+cups print ; http://localhost:631/admin

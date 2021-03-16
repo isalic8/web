@@ -1,0 +1,9 @@
+text/plain; setsid o %s & ;
+#text/html; openfile %s ; nametemplate=%s.html
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+image/*; setsid o %s & ;
+video/*; setsid o %s & ;
+audio/*; setsid o %s & ;
+application/pdf; setsid o %s & ;
+application/pgp-encrypted ; gpg -d '%s'; copiousoutput;
+application/pgp-keys ; gpg --import '%s'; copiousoutput;

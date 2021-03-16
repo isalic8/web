@@ -1,0 +1,186 @@
+@font-face {
+	font-family:  'terminus';
+	src:  url(files/terminus.ttf);
+}
+
+:root { 
+	/*--nav-background: #F8F9F9;*/
+	/*--nav-text-color: #000;*/
+	/*--logo-text-color: #000;*/
+	/*--body-background: #F9FAFB;*/
+	/*--link-text-color: #1F7BB3;*/
+	/*--pre-background: #efefef;*/
+	/*--code-text-color: #b8bb26;*/
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	opacity: 1;
+}
+
+body {
+	background-color: #181818;
+	/*background-color: #6c6458;*/
+	font-family: terminus;
+	color: #cfcee4;
+}
+
+.header p {
+	padding: 0 0 0 10px;
+	font-size: 1.5rem;
+	width: 200px;
+}
+
+.header a {
+	color: #cfcee4;
+}
+
+.header p img {
+	width: 20px;
+	float: right;
+
+}
+
+.main {
+	background-color: #000000;
+	border-radius: 6px 6px 6px 6px ;
+	border: solid 2px #cfc5b4;
+	margin: 0 2%;
+	padding: 20px;
+}
+
+.footer {
+	text-align: center;
+	padding-bottom: 0;
+
+}
+
+.footer ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 0 0 10px 10px;
+}
+
+/*Rules for grid classes with borders*/
+.grid-item-border {
+		border: solid 1px #cfc5b4;
+		padding-bottom: 10%;
+}
+
+.grid-item-border h3 {
+	text-align: center;
+}
+
+.grid-item-border li {
+	padding-left: 10%
+}
+
+p {
+	font-size: 1.2em;
+}
+
+a {
+	text-decoration: none;
+	color: #5DBB63;
+}
+
+a:hover {
+	color: rgb(255,255,150);
+}
+
+li {
+	list-style: none;
+	padding-left: 5px;
+}
+
+h3 {
+	height: 3px;
+	color: rgb(255,255,150);
+}
+
+img {
+	width: 100%;
+}
+
+img.img-smaller{
+	width: 60%;
+}
+
+h1 img {
+	width: 20px;
+}
+
+pre {
+	/*background: var(--pre-background);*/
+	background: #3C3A3A;
+	padding: 10px;
+	border: 2px solid white;
+	border-radius: 8px;
+	overflow: auto;
+	color: white;
+}
+
+nav ul {
+	padding-left: 0;
+}
+
+nav ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 0 0 10px 10px;
+	font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 800px) {
+	.main {
+		margin: 0 10%;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 10px;
+	}
+
+	.grid-item-border {
+		border: solid 1px #cfc5b4;
+	}
+
+	.grid-item-border h3 {
+		text-align: center;
+	}
+
+	.grid-item-border li {
+		padding-left: 10%;
+	}
+
+	li {
+		list-style: none;
+		padding: 0px;
+	}
+
+	/*Lazy styling rules for gifs*/
+	#index_gif_row {
+		padding-top: 50px;
+	}
+
+}
+
+/*Lazy styling rules for gifs*/
+#key_gif {
+	width: 30px;
+	padding-bottom: 5px;
+}
+
+#vim_gif {
+	width: 91px;
+	
+}	
+
+#index_gif_row {
+	padding: 50px 0 50px 0;
+}
+
+#bart_gif {
+	height: 30px;
+}
