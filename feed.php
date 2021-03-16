@@ -65,10 +65,6 @@
 			<li><a href="guides/software/w3m.php">The awesomeness of the W3M terminal web browser</a></li>
 			<li><a href="guides/software/urxvt.php">A basic urxvt config</a></li>
 			<li>Scripts (some mine; some not)</li>
-			<li><a href="guides/software/sh-compress.php">Compress archives</a></li>
-			<li><a href="guides/software/sh-extract.php">Extract archives</a></li>
-			<li><a href="guides/software/sh-mouse.php">Mouse accelleration changer</a></li>
-			<li><a href="guides/software/sh-dd.php">Somewhat useful dd wrapper</a></li>
 			<li><a href="guides/software/sh-sw.php">Portable swallow script</a></li>
 			<li><a href="guides/software/sh-torbrowser.php">Tor browser install script + firejail wrapper</a></li>
 		</div>

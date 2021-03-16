@@ -151,7 +151,7 @@ lemonconfig | lemonbar -p \
 	The "_Format" function isn't used in my fork, but it's still included.<br>
 	You'll notice the "_Modules" function echoes out a character and then the output of a module.<br>
 	The reason for this is that our loop in "_Main" uses a simple regex to run a particular command if a line contains a specific pattern.<br>
-	Adding a letter to the beginning of each makes parsing the line A LOT simpler.<br>
+	Adding a letter to the beginning of each line makes parsing the line A LOT simpler.<br>
 	<br>
 	Fifo file (named pipe):<br>
 	A named pipe acts the same a traditional pipe, except it stores the stdout into a file which can be used as stdin.<br>
