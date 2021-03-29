@@ -79,9 +79,7 @@ _Workspaces() {
 }
 
 _WindowName(){
-	name=$(wmctrl -l | grep -i $(bspc query -N -n) 2&gt; /dev/null | while read line; do [ -z "$line" ] && continue ;echo ${line##* }; done)
-	[ -z "$name" ] && name=""
-	echo "$name"
+	xdotool getwindowfocus getwindowname
 }
 
 _CurrentWorkspace(){
