@@ -82,6 +82,8 @@
 			<li><a href="guides/hardware/libreboot-general.php">General things to know.</a></li>
 			<li>Digispark</li>
 			<li><a href="guides/hardware/digispark.php">Digispark installation</a></li>
+			<li>Raspberry Pi</li>
+			<li><a href="guides/hardware/pi3-overclock.php">Overclock profile 3B+</a></li>
 		</div>
 		<div class="grid-item-border">
 		<h3>Misc</h3>
