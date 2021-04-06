@@ -30,13 +30,13 @@
 
 	<h3>SSH keys</h3>
 	<p>
-	Using key based authentication over password based authentication completely eliminates attackers from being able to remotely log into our machine over ssh.
+	Using key based authentication over password based authentication completely eliminates attackers from being able to remotely log into our machine over ssh.<br>
 	It'll require the individual to have access to the generated key file in order to login.
 	</p>
 
 	<p>
-	This command will generate two files. An ssh public key and an ssh private key.
-	We'll upload the public key to our server and then login using our private key.
+	This command will generate two files. An ssh public key and an ssh private key.<br>
+	We'll upload the public key to our server and then login using our private key.<br>
 	By default, this command generates the keys in the "~/.ssh/" directory.
 	</p>
 	<pre>
@@ -67,7 +67,7 @@ $ systemctl restart sshd
 
 	<h3>Restrict user commands</h3>
 	<p>
-	In the event that an attacker gains access to our user account, we want to restrict any possible commands that could lead to privledge escalation.
+	In the event that an attacker gains access to our user account, we want to restrict any possible commands that could lead to privledge escalation.<br>
 	Since we generally only work as a root user when configuring our servers, we'll only allow our user access to the "su" command and nothing more.
 	</p>
 
@@ -92,8 +92,8 @@ $ chmod -R 0750 programs .bash_profile
 	<h3>Changing shell</h3>
 	<p>
 	Depending on your use case, it is also beneficial to change the users shell. You can change the shell to something like "/usr/sbin/nologin" to disable logins, or something like rbash
+	Rbash stands for "restricted bash". It's pretty much bash with a lot of the builtin functions removed. (read the manual)
 	</p>
-	<p>Rbash stands for "restricted bash". It's pretty much bash with a lot of the builtin functions removed. (read the manual)</p>
 	<pre>
 $ usermod -s /usr/bin/rbash user
 	</pre>

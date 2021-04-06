@@ -24,10 +24,10 @@
 	<h1>Letsencrypt</h1>
 	<h3>Preface</h3>
 	<p>
-	Letsencrypt is a service/tool which allows you to generate free, trusted, ssl certificates.
-	It's very easy to use.
-	On it's own, it only generates the certificates and does nothing more.
-	Assuming we've installed the necessary packages, we can use "certbot" and it's nginx plugin to automatically configure our web server with SSL!
+	Letsencrypt is a service/tool which allows you to generate free, trusted, ssl certificates.<br>
+	It's very easy to use.<br>
+	On it's own, it only generates the certificates and does nothing more.<br>
+	Assuming we've installed the necessary packages, we can use "certbot" and it's nginx plugin to automatically configure our web server with SSL.
 	</p>
 
 	<h3>Installation</h3>
@@ -37,8 +37,7 @@ apt install certbot python-certbot-nginx
 
 	<h3>Usage</h3>
 	<p>
-	<strong>--nginx:</strong> Use the nginx plugin to automatically install the certificates to our web server
-	<br>
+	<strong>--nginx:</strong> Use the nginx plugin to automatically install the certificates to our web server<br>
 	<strong>-d &lt;domain&gt;:</strong> Include these domains when creating the certificate
 	</p>
 	<pre>

@@ -23,7 +23,11 @@
 		</nav>
 	<h1>Setting up tor with nginx</h1>
 	<h3>Preface</h3>
-	<p>A few things to note: Tor sites don't require ssl. It has it's own means of encryption. We'll be configuring our nginx server to keep our clearnet site and tor site separate. Having the tor domain linked to the same nginx server as our clearnet site may cause problems when you're clearnet site tries to redirect it's users to the https protected site. We're keeping our eggs in different baskets.</p>
+	<p>A few things to note:<br>
+	Tor sites don't require ssl. It has it's own means of encryption.<br>
+	We'll be configuring our nginx server to keep our clearnet site and tor site separate.
+	Having the tor domain linked to the same nginx server as our clearnet site may cause problems when you're clearnet site tries to redirect it's users to the https protected site.<br>
+	We're keeping our eggs in different baskets.</p>
 
 	<h3>Dependencies</h3>
 	<pre>
@@ -34,6 +38,11 @@ $ systemctl start nginx tor
 	</pre>
 
 	<h3>Setting up our tor hidden service</h3>
+	<p>
+	The HiddenServiceDir is where our onion domain's private and public keys will be stored.<br>
+	HiddenServiceVersion 3 is the most recent and most secure onion version. It has longer domain names.<br>
+	We're creating a new hidden service which will be accessible to the tor network via port 80.
+	</p>
 	<pre>
 $ vim /etc/tor/torrc
 

@@ -23,11 +23,9 @@
 		</nav>
 	<h1>Setting searx as the default search engine</h1>
 	<p>
-	I couldn't get this to work properly on firefox unfortunatley. 
-	<a href="https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox" target="_blank">It's method of adding custom search engines is horrid.</a> It seems to snag the proxy_pass url (127.0.0.1:8888) instead of our domain (search.yourdomain.com).
-	<br>
-	<br>
-	It can be easily added in chrome/chromium by adding this url to your search engine list:
+	You can change the default search engine on chromium easily.<br>
+	With firefox you have to install a third party plugin for it.<br>
+	Here's what the search engine url should look like.
 	<br>
 	<br>
 	<span style="color:#FF0000;">https://search.yourdomain.com/search?q=%s</span>

@@ -22,8 +22,8 @@
 	<h1>URXVT</h1>
 	<h3>Preface</h3>
 	<p>
-	This isn't a tutorial or anything.
-	You could copy and paste this config to get a functional URXVT setup.
+	This isn't a tutorial or anything.<br>
+	You could copy and paste this config to get a functional URXVT setup.<br>
 	It think this is just about everything you'd need to get a usable terminal setup.
 	</p>
 	<pre>
@@ -102,8 +102,8 @@ URxvt.keysym.Control-Right: \033[1;5C
 	<li>Scroll up: S-UP S-DOWN</li>
 
 	<p>
-	I added a couple comments explaining what each line does.
-	The best advice I could give you is to google the features you need or don't need.
+	I added a couple comments explaining what each line does.<br>
+	The best advice I could give you is to google the features you need or don't need.<br>
 	Use <a href="https://terminal.sexy" target=_blank>terminal.sexy</a> to get your initial colorscheme setup.
 	</p>
 

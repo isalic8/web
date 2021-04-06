@@ -23,8 +23,8 @@
 	<h1>Better scratchpad bspwm</h1>
 	<h3>Preface</h3>
 	<p>
-	The scratchpad scripts I found for bspwm SUCK.
-	Some either stop working if you kill the terminal or bug out when you manage your window states.
+	The scratchpad scripts I found for bspwm SUCK.<br>
+	Some either stop working if you kill the terminal or bug out when you manage your window states.<br>
 	Here's a script I wrote that get's the job done RIGHT!
 	</p>
 
@@ -33,9 +33,8 @@
 
 	<h3>Setup stuff</h3>
 	<p>
-	The following script checks to see if classname "Scratchy" exists.<br>
-	If it doesn't exist, it opens the terminal.<br>
-	If it does exists, it either hides or shows the terminal accordingly.
+	The "scratchy" script checks to see if a terminal with the classname "scratchy" exists.<br>
+	If it doesn't exist, it creates it. If it does exist, it hides it.
 	</p>
 	<pre>
 &gt;&gt; /path/to/scratchy
@@ -55,14 +54,22 @@ fi
 	</pre>
 
 	<p>
-	This next part tells bspwm that the window with the class name "scratcy" will be a sticky window, floating, and have the given dimensions.<br>
+	Next we'll assign special attributes for the window with the classname scratchy in our BSPWMRC.<br>
+	I have it configured to automatically adjust the window position based on the size of the monitor.<br>
 	To get the window to be exactly centered, just do (1/2 monitor width) - (1/2 window width) as the X offset
 	</p>
 	<pre>
 &gt;&gt; /path/to/bspwmrc
 
+# Calculate the center of the screen for a 600x400 scratchpad
+scratchpad_xy="600x400"
+display_xy=$(xdpyinfo | grep -i dimensions | awk '{ print $2 }')
+half_display=$(echo $display_xy | tr 'x' ' ' | cut -f1 -d' ' | xargs -I _ echo _/2 | bc)
+half_scratchpad=$(echo $scratchpad_xy | tr 'x' ' ' | cut -f1 -d' ' | xargs -I _ echo _/2 | bc)
+offset=$(echo ${half_display}-${half_scratchpad} | bc)
+
 # rectangle=WidthxHeight+Xoffset+Yoffset
-bspc rule -a scratchy sticky=on state=floating rectangle=1200x400+360+0
+bspc rule -a scratchy sticky=on state=floating rectangle=${scratchpad_xy}+${offset}+0
 	</pre>
 
 	<pre>

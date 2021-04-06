@@ -43,7 +43,8 @@ $ cd linux-pinebook-pro
 	<p>
 	The "ARCH" variable specifies the target machines architecture.<br>
 	The "CROSS_COMPILE" variable specifies which compiler the system should use.<br>
-	Running "make menuconfig" opens an ncurses menu which you can use to modify the kernel. You don't need to change anything. Run the command and exit the ncurses menu to save to kernel configuration to "./.config"<br>
+	Running "make menuconfig" opens an ncurses menu which you can use to modify the kernel. You don't need to change anything.<br>
+	Run the command and exit the ncurses menu to save to kernel configuration to "./.config"
 	</p>
 
 	<pre>

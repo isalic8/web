@@ -24,23 +24,23 @@
 	<h1>Let's encrypt with OpenBsd</h1>
 	<h3>Preface</h3>
 	<p>
-	Installing ssl certificates is a breeze with OpenBsd.
-	Most of the configuration is self explanatory.
-	We'll use acme-client to generate our certs.
+	Installing ssl certificates is a breeze with OpenBsd.<br>
+	Most of the configuration is self explanatory.<br>
+	We'll use acme-client to generate our certs.<br>
 	I'm asssuming that you've already added your servers ip to your domains dns records.
 	</p>
 
 	<h3>Setting things up</h3>
 	<p>
-	There ain't too much to do here.
-	We'll add our domain name to acme-client's config and then start the httpd web server.
-	The acme client creates a file in /var/www/acme/ which is accessible over the webserver.
-	This file is then transmitted to Let's Encrypt.
-	Let's Encrypt then attempts to download this file from our domain (http://example.com/path/to/file).
+	There ain't too much to do here.<br>
+	We'll add our domain name to acme-client's config and then start the httpd web server.<br>
+	The acme client creates a file in /var/www/acme/ which is accessible over the webserver.<br>
+	This file is then transmitted to Let's Encrypt.<br>
+	Let's Encrypt then attempts to download this file from our domain (http://example.com/path/to/file).<br>
 	If the file is the same as the file sent from our localmachine, then Let's Encrypt knows that our server is legitamite and not a bad actor posing as the owner of the domain.
 	</p>
 
-	<p>Pewww.., now that that's out of the way, here's the beans on setting it up.</p>
+	<p>Phewww.., now that that's out of the way, here's the beans on setting it up.</p>
 	<pre>
 # Copy config file 
 cp /etc/example/acme-client.conf /etc/
@@ -51,8 +51,9 @@ rcctl -f start httpd
 
 	<h3>Editing the config</h3>
 	<p>
-	I don't need to explain anything here. Just replace "example.com" with your domain name in /etc/acme-client.configuration.
-	It should look somethings like this.
+	I don't need to explain anything here.<br>
+	Just replace "example.com" with your domain name in /etc/acme-client.configuration.<br>
+	It should look somethings like this:
 	</p>
 	<pre>
 #
@@ -90,8 +91,8 @@ domain unixfandom.com {
 
 	<h3>Generating the cert</h3>
 	<p>
-	Again self explanatory. 
-	One thing I haven't tested is having more than one alternative domain listed.
+	Again self explanatory. <br>
+	One thing I haven't tested is having more than one alternative domain listed.<br>
 	I'm not sure if you separate the domains by space or comma - I should test this...
 	</p>
 	<pre>

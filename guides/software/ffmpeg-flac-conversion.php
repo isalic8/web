@@ -28,6 +28,10 @@
 	</p>
 
 	<h3>Actually doing it</h3>
+	<p>Description of the commands listed below</p>
+	<pre>
+ffmpeg -i "input.flac" -codec:a libmp3lame -map_metadata 0 -id3v2_version 3 -write_id3v1 1 -map a:0 -b:a 320k "output.mp3"
+	</pre>
 	<p>
 	"-i" Pass our input file<br>
 	"-codec:a" Passing our preffered audio codec<br>
@@ -36,14 +40,11 @@
 	"-map a:0" I <strong>think</strong> this makes it so ffmpeg ONLY outputs the audio streams to the mp3 file. Otherwise ffmpeg tries to copy the album art from the flac file, which MP3 files cannot handle. Errors will be thrown without this option.<br>
 	"-b:a 320k" This is our audio bitrate
 	</p>
-	<pre>
-ffmpeg -i "input.flac" -codec:a libmp3lame -map_metadata 0 -id3v2_version 3 -write_id3v1 1 -map a:0 -b:a 320k "output.mp3"
-	</pre>
 
 	<h3>Mass converting files</h3>
 	<p>
 	Here's the script which I'm currently using to convert my music.<br>
-	Ffmpeg is set to output the mp3 files to the "./mp3/" directory.
+	FFmpeg is set to output the mp3 files to the "./mp3/" directory.
 	</p>
 	<pre>
 #!/bin/sh

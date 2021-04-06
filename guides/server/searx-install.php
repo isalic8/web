@@ -24,14 +24,19 @@
 	<h1>Searx Installation</h1>
 
 	<h3>Preface</h3>
-	<p>I'm doing this on a Debian 10 server. The guide assumes you have root privledges. I think ubuntu requires you add your user to the docker group (usermod -aG docker username)</p>
+	<p>I'm doing this on a Debian 10 server.<br>
+	The guide assumes you have root privledges.<br>
+
 	<h3>Dependencies</h3>
 	<pre>
 $ apt install docker docker.io nginx 
 	</pre>
 
 	<h3>Creating Searx container</h3>
-	<p>This pulls and starts the docker container, creating a web socket that's accessible via 127.0.0.1:8888. Normally this image creates a searx instance that's accessible via the servers public IP. We don't want this since we're going to be accessing the container through nginx.</p>
+	<p>
+	This pulls and starts the docker container, creating a web socket that's accessible via 127.0.0.1:8888.<br>
+	Normally this image creates a searx instance that's accessible via the servers public IP.<br>
+	We don't want this since we're going to be accessing the container through nginx.</p>
 	<pre>
 docker pull wonderfall/searx
 docker run -d --restart unless-stopped --name searx -p 127.0.0.1:8888:8888 wonderfall/searx
@@ -62,7 +67,9 @@ server {
 	</pre>
 
 	<h3>Starting the container as service</h3>
-	<p>Our searx server should be up and running. Let's create a systemd service to start the container on boot</p>
+	<p>
+	Our searx server should be up and running.<br>
+	Let's create a systemd service to start the container on boot</p>
 	<pre>
 $ vim /etc/systemd/system/docker-searx.service
 <code>
@@ -86,7 +93,8 @@ $ systemctl status docker-searx
 
 	<h3>DONE!</h3>
 	<p>
-	Searx should be up and running on "search.yourdomain.com". I recommend changing the access_log and error_log files to "/dev/null" in /etc/nginx/nginx.conf. 
+	Searx should be up and running on "search.yourdomain.com".<br>
+	I recommend changing the access_log and error_log files to "/dev/null" in /etc/nginx/nginx.conf. 
 	<br>
 	<br>
 	Logs are for google.

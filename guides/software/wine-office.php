@@ -24,8 +24,8 @@
 	<h1>Microsoft Office in Linux</h1>
 	<h3>Preface</h3>
 	<p>
-	I'm using Microsoft Office 2010 32Bit for this tutorial.
-	Get your <a target="_blank" href="https://thepiratebay.org/description.php?id=5624753">pirate hat</a> on if you haven't already.
+	I'm using Microsoft Office 2010 32Bit for this tutorial.<br>
+	Get your <a target="_blank" href="https://thepiratebay.org/description.php?id=5624753">pirate hat</a> on if you haven't already.<br>
 	We'll be using Wine (5.13 in my case) and Arch Linux.
 	</p>
 
@@ -37,7 +37,8 @@ $ pacman -S wine wine-gecko wine-mono samba cabextract winetricks zenity
 
 	<h3>Setting up wine</h3>
 	<p>
-	We're going to tell wine which architecture to use for our windows enviroment. We'll also tell it where to install the enviroment to.
+	We're going to tell wine which architecture to use for our windows enviroment.<br>
+	We'll also tell it where to install the enviroment to.
 	</p>
 
 	<pre>
@@ -58,7 +59,7 @@ $ wine office2010-setup.exe
 
 	<h3>Post installation</h3>
 	<p>
-	To run office, you have to manually run wine on the executable file.
+	To run office, you have to manually run wine on the executable file.<br>
 	I suggest creating a shortcut of some kind.
 	</p>
 

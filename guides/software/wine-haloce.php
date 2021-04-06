@@ -41,10 +41,10 @@ WINEARCH=win32 ~/.wine/[...]/halo.exe
 
 	<h3>Troubleshooting</h3>
 
-	<h4>"Muh halo has nuh audio"</h4>
+	<h4>"My audio isn't working"</h4>
 	<p>Install "lib32-alsa-plugins lib32-libpulse lib32-openal" if you haven't already. I had this problem with pulseaudio.</p>
 
-	<h4>"It don't werk"</h4>
+	<h4>"It just doesn't work"</h4>
 	<p>
 	Explicitly set the <span class="emph">WINEARCH</span> variable before running it. Hopefully this fixes the problem
 	</p>

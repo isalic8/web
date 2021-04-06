@@ -23,7 +23,11 @@
 		</nav>
 	<h1>GPG with GTK prompt</h1>
 	<h3>Preface</h3>
-	<p>You may have experienced a problem where you want a graphical prompt to appear when decrypting files, but instead a tty prompt appears. Your gpg agent uses "pinentry" to display this prompt. All we need to do is tell gpg agent to use pinentry-gtk instead of pinentry-tty</p>
+	<p>
+	You may have experienced a problem where you want a graphical prompt to appear when decrypting files, but instead a tty prompt appears.<br>
+	Your gpg agent uses "pinentry" to display this prompt.<br>
+	All we need to do is tell gpg agent to use pinentry-gtk instead of pinentry-tty<br>
+	</p>
 
 	<pre>
 # Create the file if it doesn't exist

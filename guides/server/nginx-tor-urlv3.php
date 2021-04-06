@@ -32,7 +32,8 @@
 	</p>
 
 	<h3>Compiling the application</h3>
-	<p>You'll likely get some errors relating to missing libraries. Search online for the library package for your distribution or refer to <a href="https://github.com/cathugger/mkp224o">mkp224o</a>.</p>
+	<p>You'll likely get some errors relating to missing libraries... I honestly forgot to take note of the ones it demanded.<br>
+	Search search online for the package required or refer to <a href="https://github.com/cathugger/mkp224o">mkp224o</a>.</p>
 
 	<pre>
 $ git clone https://github.com/cathugger/mkp224o.git
@@ -42,7 +43,10 @@ $ ./configure
 	</pre>
 
 	<h3>Generating our domain</h3>
-	<p>The longer the prefix, the longer the time it takes to generate a key.</p>
+	<p>
+	The longer the prefix, the longer the time it takes to generate a key.<br>
+	The "-d" option denotes the output directory.
+	</p>
 	<pre>
 $ ./mkp224o -d unixkeys unix
 
@@ -57,8 +61,9 @@ hs[...]_secret_key
 	</pre>
 
 	<p>
-	After that, all we need to do is copy the secret key to the hidden service directory on our server.
-	Make sure that the owner of the file is the tor user ("debian-tor" on debian machines). Tor will overwrite the file if the incorrect owner is set.
+	After that, all we need to do is copy the secret key to the hidden service directory on our server.<br>
+	Make sure that the owner of the file is the tor user ("debian-tor" on debian machines).<br>
+	Tor will overwrite the file if the incorrect owner is set.
 	</p>
 	</div>
 	<div class="footer">

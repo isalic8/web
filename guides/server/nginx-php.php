@@ -28,7 +28,9 @@ $ apt install nginx php php-fpm
 	</pre>
 
 	<h3>Setting up php and nginx services</h3>
-	<p>The cgi.fix_pathinfo variable tells PHP to attempt to execute the closest file it can find if the requested PHP file cannot be found. Let's set this variable to false.</p>
+	<p>
+	The cgi.fix_pathinfo variable tells PHP to attempt to execute the closest file it can find if the requested PHP file cannot be found.<br>
+	Let's set this variable to false.</p>
 	<pre>
 $ vim /etc/php/7.3/fpm/php.ini
 <span style="color: red;"># Edit this variable</span>
@@ -40,6 +42,7 @@ $ systemctl enable nginx php7.3-fpm
 	</pre>
 
 	<h3>Adding PHP to nginx</h3>
+	<p>This goes in /etc/nginx/sites-enabled/WEBSITE</p>
 	<pre>
 server {
     listen 80 default_server;
@@ -48,7 +51,7 @@ server {
     root /var/www/html;
     index <span style="color: red;">index.php</span> index.html index.htm index.nginx-debian.html;
 
-    server_name server_domain_or_IP;
+    server_name <span style="color: red;">server_domain_or_IP</span>;
 
     location / {
         try_files $uri $uri/ =404;

@@ -22,8 +22,8 @@
 	<h1>Setting up a dummy webcam</h1>
 	<h3>Preface</h3>
 	<p>
-	I experienced my first proctored exam today.
-	Being that I'm a technologist, I thought it'd be pretty fun to pre-record myself and have that recording output to a virtual webcam.
+	I experienced my first proctored exam today.<br>
+	Being that I'm a technologist, I thought it'd be pretty fun to pre-record myself and have that recording output to a virtual webcam.<br>
 	Here's a not so descriptive guide on using ffmpeg with the v4l2loopback kernel module to create a virtual dummy webcam.
 	</p>
 	
@@ -32,7 +32,7 @@
 	<p>This module allows for the creation of virtual video devices.</p>
 	<pre>
 # Dependencies
-sudo apt install -y build-essential linux-headers-$(uname -r) v4l-utils
+$ sudo apt install -y build-essential linux-headers-$(uname -r) v4l-utils
 
 # Installation
 $ git clone https://github.com/umlaeute/v4l2loopback.git
@@ -50,11 +50,11 @@ $ v4l2-ctl --list-device
 	<p>Subsitute /dev/video3 for whatever devices your dummy webcam is using.</p>
 	<pre>
 # For video
-ffmpeg -re -stream_loop -1 -i "video.mp4" -f v4l2 /dev/video3
+$ ffmpeg -re -stream_loop -1 -i "video.mp4" -f v4l2 /dev/video3
 
 
 # For image
-ffmpeg -framerate 1 -loop 1 -re -i "image.png" -f v4l2 -vcodec rawvideo -pix_fmt yuv420p /dev/video3
+$ ffmpeg -framerate 1 -loop 1 -re -i "image.png" -f v4l2 -vcodec rawvideo -pix_fmt yuv420p /dev/video3
 	</pre>
 
 	</div>

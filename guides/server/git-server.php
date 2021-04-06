@@ -22,13 +22,18 @@
 			<?php include '../navigation.php';?>
 		</nav>
 	<h1>Selfhosted git server</h1>
-	<p>This is mostly copied from <a href="https://www.linux.com/training-tutorials/how-run-your-own-git-server/">this tutorial</a>. I added somethings they didn't touch on, such as adding the remote with a non-default ssh port and key.</p>
+	<p>
+	This is mostly copied from <a href="https://www.linux.com/training-tutorials/how-run-your-own-git-server/">this tutorial</a>.<br>
+	I added somethings they didn't touch on, such as adding the remote with a non-default ssh port and key.</p>
+
 	<h3>Dependencies</h3>
 	<pre>
 $ apt install git-core
 	</pre>
+
 	<h3>Creating a git user</h3>
-	<p>We'll create a git user that we'll use to access our repositories. We'll set it up with SSH keys for secure authentication.</p>
+	<p>
+	We'll create a git user that has access our repositories and set him up with an ssh keys pair for secure authentication.<br>
 	<pre>
 # On the server:
 $ useradd -m git
@@ -40,7 +45,11 @@ $ cat /path/to/id_rsa.pub | ssh git@remote-server "mkdir -p ~/.ssh && cat >>  ~/
 	</pre>
 
 	<h3>Creating repositories</h3>
-	<p>The location of your git repository doesn't exactly matter. Just make sure that your git user is the owner and has the permissions to access the files.</p>
+	<p>
+	The location of your git repository doesn't exactly matter.<br>
+	Just make sure that your git user is the owner and has the permissions to access the files.
+	</p>
+
 	<pre>
 $ mkdir /home/git/dwm.git
 $ cd /home/git/dwm.git
@@ -76,7 +85,8 @@ $ git clone git@serv:/home/git/dwm.git
 </pre>
 
 	<h3>DONE!</h3>
-	<p>That's about it. It's pretty straight foward. If you want to push your repository to multiple remotes, you can create a git alias as so:</p>
+	<p>That's about it. It's pretty straight foward.<br>
+	If you want to push your repository to multiple remotes, you can create a git alias as so:</p>
 	<pre>
 $ git config alias.pushall '!git push origin master && git push remote-name master'
 $ git pushall
