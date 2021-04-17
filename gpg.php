@@ -22,7 +22,9 @@
 			<?php include 'navigation.php';?>
 		</nav>
 		<h1>GPG <img src="files/pix/key.gif" alt="key_gif" id="key_gif"></h1>
-		<p>Ipsum ullam aliquid et quos exercitationem Assumenda doloribus nisi vel distinctio recusandae Accusantium tempore similique praesentium maxime voluptas Unde doloribus enim repellat architecto voluptate. Quam maxime sint ad reprehenderit eos</p>
+		<p>
+		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		</p>
 		<div class="footer">
 				<?php include 'footer.php';?>
 		</div>
