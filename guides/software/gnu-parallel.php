@@ -22,13 +22,13 @@
 	<h1>Running commands in parallel</h1>
 	<h3>Preface</h3>
 	<p>
-	I found a tool called "parallel" that lets you initiate multiple instances of command on arguments passed from stdin<br>
-	It's a little weird for me to explain, but just take a look at a few examples
+	I found a tool called "parallel" that lets you run commands in parallel instead of sequentially<br>
+	It's easier to explain using examples
 	</p>
 
 	<h3>Usage</h3>
 	<p>
-	The triple colons denotes the arguments received from stdin.<br>
+	The three colons get substituted for the arguments received from stdin<br>
 	The "-j" option denotes how many individual processes will be created.
 	</p>
 	<pre>
@@ -43,8 +43,8 @@ $ find -name "*.txt" | parallel -j 8 grep -i "parallel" :::
 
 	<p>
 	GNU parallel also takes stdin from a file.<br>
-	Running parallel doesn't actually make a process use more than one CPU core.<br>
-	Parallel only runs different instances on other cores.<br>
+	You also don't have to worry about parallel creating two different processes which act on the same file<br>
+	An example would be "grep" being run on "file.txt" twice.
 	</p>
 
 	<pre>
