@@ -31,7 +31,8 @@
 	<h3>SSH keys</h3>
 	<p>
 	Using key based authentication over password based authentication completely eliminates attackers from being able to remotely log into our machine over ssh.<br>
-	It'll require the individual to have access to the generated key file in order to login.
+	This only really makes a difference if you use weak passwords that are susceptible to dictionary based attacks<br>
+	SSH keys will require the individual to have access to the generated key file in order to login.
 	</p>
 
 	<p>

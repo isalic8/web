@@ -48,7 +48,8 @@
 		<h3>Software</h3>
 			<li>BSPWM</li>
 			<li><a href="guides/software/bspwm-lemonbar.php">BSPWM with lemonbar</a></li>
-			<li><a href="guides/software/bspwm-scratchpad.php">A GOOD scratchpad with BSPWM</a></li>
+			<li><a href="guides/software/bspwm-dynamic-borders.php">BSPWM dynamically change borders</a></li>
+			<li><a href="guides/software/bspwm-scratchpad.php">BSPWM A GOOD scratchpad</a></li>
 			<li>Wine</li>
 			<li><a href="guides/software/wine-dll.php">Installing .dll files</a></li>
 			<li><a href="guides/software/wine-office.php">Microsoft Office 2010</a></li>
